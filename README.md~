@@ -13,9 +13,4 @@ For setup_hadoop.sh:
 
 For setup_tachyon.sh:
 
-1) As before, poutakey.pem, setup_tachyon.sh and upload_and_start_tachyon.sh have to be in the same folder.
-2) Same as with hadoop.
-3) After the installation, type the following commands to start tachyon:
-
-	- cd tachyon-0.5.0/bin
-	- ./tachyon-start.sh all SudoMount 
+1) As before, poutakey.pem, setup_tachyon.sh and upload_and_start_tachyon.sh have to be in the same folder. 
