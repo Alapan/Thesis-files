@@ -65,14 +65,14 @@ scp -i "/home/$USER/$KEY" /etc/hosts.add "$USER"@"$WORKER1IP":~
 scp -i "/home/$USER/$KEY" /etc/hosts.add "$USER"@"$WORKER2IP":~
 echo "Adding Hostnames for worker-1-full"
 ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "touch ~/hosts"
-ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "sudo cp /dev/null /etc/hosts"
-ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "cat ~/hosts.add >> /etc/hosts"
-
+ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "cat ~/hosts.add > ~/hosts"
+ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "sudo mv /home/$USER/hosts /etc/hosts"
 
 echo "Adding Hostnames for worker-2-full"
 ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER2IP" "touch ~/hosts"
-ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER2IP" "sudo cp /dev/null /etc/hosts"
-ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER2IP" "cat ~/hosts.add >> /etc/hosts"
+ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER2IP" "cat ~/hosts.add > ~/hosts"
+ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER2IP" "sudo mv /home/$USER/hosts /etc/hosts"
+
 
 echo "Setting Nameservers for worker-1-full"
 ssh -o "StrictHostKeyChecking no" -i "/home/$USER/$KEY" "$USER"@"$WORKER1IP" "touch ~/resolv.conf"
