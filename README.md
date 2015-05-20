@@ -27,7 +27,7 @@ Run teragen with Spark:
 
 Run count job with Spark:
 
->> cd $HOME/SparkWordCount
->> /home/cloud-user/spark-1.1.0/bin/spark-submit --class SimpleApp --master spark://master-full:7077 /home/cloud-user/SparkWordCount/target/scala-2.10/simple-project_2.10-1.0.jar
+1. cd $HOME/SparkWordCount
+2. /home/cloud-user/spark-1.1.0/bin/spark-submit --class SimpleApp --master spark://master-full:7077 /home/cloud-user/SparkWordCount/target/scala-2.10/simple-project_2.10-1.0.jar
 
 
