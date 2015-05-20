@@ -23,7 +23,7 @@ For setup_tachyon.sh:
 
 Run teragen with Spark:
 
-/home/cloud-user/spark-1.1.0/bin/spark-submit --class org.apache.spark.examples.terasort.GenSort --master spark://master-full:7077 /home/cloud-user/terasort/target/scala-2.10/simple-project_2.10-1.0.jar 1 10 hdfs://master-full:54310/tera-output
+1. /home/cloud-user/spark-1.1.0/bin/spark-submit --class org.apache.spark.examples.terasort.GenSort --master spark://master-full:7077 /home/cloud-user/terasort/target/scala-2.10/simple-project_2.10-1.0.jar 1 10 hdfs://master-full:54310/tera-output
 
 Run count job with Spark:
 
