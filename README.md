@@ -19,3 +19,15 @@ For setup_tachyon.sh:
 
 	- cd tachyon-0.5.0/bin
 	- ./tachyon-start.sh all SudoMount 
+
+
+Run teragen with Spark:
+
+/home/cloud-user/spark-1.1.0/bin/spark-submit --class org.apache.spark.examples.terasort.GenSort --master spark://master-full:7077 /home/cloud-user/terasort/target/scala-2.10/simple-project_2.10-1.0.jar 1 10 hdfs://master-full:54310/tera-output
+
+Run count job with Spark:
+
+>> cd $HOME/SparkWordCount
+>> /home/cloud-user/spark-1.1.0/bin/spark-submit --class SimpleApp --master spark://master-full:7077 /home/cloud-user/SparkWordCount/target/scala-2.10/simple-project_2.10-1.0.jar
+
+
